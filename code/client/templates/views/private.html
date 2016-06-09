@@ -1,0 +1,31 @@
+<template name="private">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				{{#unless uploading}}
+				<input type="file" name="uploadCSV">
+				{{else}}
+				<p><i class="fa fa-spin fa-refresh"></i> Uploading....</p>
+				{{/unless}}
+			</div>
+			<div class="col-md-6">
+				<button class="btn btn-primary">RUN</button>
+				<p>Some information regarding RUN/RUN History?</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				{{#each site}}
+					<h1>{{name}}</h1>
+					  {{> studentMatch}}
+				{{/each}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				{{> unmatched}}
+			</div>
+		</div>
+	</div>
+</template>
