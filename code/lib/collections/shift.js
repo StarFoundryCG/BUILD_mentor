@@ -1,0 +1,1 @@
+Shifts = new Mongo.Collection('shifts');

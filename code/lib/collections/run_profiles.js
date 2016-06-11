@@ -1,0 +1,1 @@
+RunProfiles = new Mongo.Collection('runprofiles');
